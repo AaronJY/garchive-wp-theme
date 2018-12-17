@@ -1,0 +1,186 @@
+/*
+Theme Name: gArchive
+Author: Aaron Yarborough
+Author URI: http://aaronjy.me
+Description: Theme for gArchive
+Version: 2
+Text Domain: garchive
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Bitter', serif;
+}
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color: rgb(25, 145, 99);
+    font-weight: bold;
+    transition: .3s color;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: rgb(34, 211, 143);
+}
+
+.gar-list-flat {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.gar-list-flat li {
+    display: inline-block;
+}
+
+.gar-header-title {
+    font-size: 40px;
+    font-family: 'Bitter', serif;
+    font-weight: 600;
+}
+
+.gar-header-title a {
+    color: #111;
+}
+
+.gar-header-nav {
+    margin: 20px 0;
+}
+
+.gar-header-nav li {
+    margin: 0 10px;
+}
+
+#postGrid .gar-post-box {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.gar-post-box {
+    padding: 15px;
+}
+
+.gar-post-box-author {
+    color: #888;
+}
+
+.gar-header {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.gar-footer {
+    margin-top: 40px;
+    padding: 20px 0;
+    background-color: #111;
+    color: #fff !important;
+}
+
+.gar-post-subtitle {
+    color: #777;
+    margin-top: 20px;
+}
+
+.gar-post-subtitle p {
+    margin-bottom: 5px;
+}
+
+.gar-post-box-category a {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.comments-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.commentlist {
+    list-style: none;
+    padding: 0;
+}
+
+.commentlist .comment {
+    margin-bottom: 20px;
+}
+
+.comment-form-comment>label {
+    display: block;
+}
+
+.single h2 {
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+.wp-block-code {
+    max-height: 500px;
+}
+
+pre {
+    font-size: 72.5%;
+}
+
+#search {
+    width: 100%;
+    height: 100px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: -100px;
+    transition: 0.5s margin-top;
+}
+
+#search.open {
+    margin-top: 0;
+}
+
+#searchBox {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #111;
+    background-color: #fff;
+}
+
+#searchBtn {
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border: 0;
+    padding: 8px;
+    color: #fff;
+    background-color: #111;
+}
+
+#comment {
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+    #postGrid .gar-post-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    #searchBox {
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+}
