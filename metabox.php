@@ -5,7 +5,7 @@ add_filter('rwmb_meta_boxes', function ($meta_boxes) {
     $meta_boxes[] = array(
         'id' => 'extra_post_options',
         'title' => __('Extra Post Options', 'garchive'),
-        'post_types' => array('post'),
+        'post_types' => array('post', 'page'),
         'context' => 'normal',
         'priority' => 'high',
         'autosave' => 'false',

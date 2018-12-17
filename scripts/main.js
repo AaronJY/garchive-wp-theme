@@ -41,7 +41,23 @@
             return;
 
         tinymce.init({
-            selector: editorSelector
+            selector: editorSelector,
+            menu: {},
+            style_formats: [
+                {title: 'Heading 2', format: 'h2'},
+                {title: 'Heading 3', format: 'h3'},
+                {title: 'Heading 4', format: 'h4'},
+                {title: 'Heading 5', format: 'h5'},
+                {title: 'Heading 6', format: 'h6'},
+                {title: 'Normal', block: 'p'}
+            ],
+            toolbar: 'undo redo | styleselect | bold italic | link | numlist bullist',
+            plugins: ['lists', 'link'],
+            setup: function (editor) {
+                editor.on('change', function () {
+                    editor.save();
+                });
+            }
         });
     }
 })(jQuery);

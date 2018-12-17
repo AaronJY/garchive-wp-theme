@@ -42,7 +42,8 @@ add_action('admin_init', function () {
 });
 
 add_action('template_redirect', function () {
-    if (!wp_get_current_user()) {
+
+    if (!is_user_logged_in()) {
         if (is_page_template('template-submit-content.php')) {
             wp_redirect(esc_url(home_url('/register')), 302);
         }
@@ -86,7 +87,7 @@ add_action('init', function () {
         'label' => __('Content Submission', 'garchive'),
         'description' => __('A content submission.', 'garchive'),
         'labels' => $labels,
-        'supports' => array('title', 'editor'),
+        'supports' => array('title', 'editor', 'author', 'custom-fields'),
         'taxonomies' => array('category', 'post_tag'),
         'hierarchical' => false,
         'public' => true,
