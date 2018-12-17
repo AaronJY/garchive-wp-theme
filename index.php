@@ -25,6 +25,11 @@
             </div>
         <?php endif; ?>
     </div>
+    <?php if (get_next_posts_link()): ?>
+        <div class="text-center">
+            <span class="gar-btn gar-load-more"><?php next_posts_link('Next Page'); ?></span>
+        </div>
+    <?php endif; ?>
 </div>
 
 <?php get_footer() ?>

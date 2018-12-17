@@ -10,15 +10,31 @@
 </head>
     
 <body <?php body_class(); ?>>
+
+<?php
+    $curr_user = wp_get_current_user();
+?>
+
+
+    <div class="gar-userbox">
+        <?php if ($curr_user->ID !== 0): ?>
+            <span class="gar-userbox-username"><?php echo $curr_user->user_login ?></span>
+            <a href="<?php echo wp_logout_url(esc_url(home_url('/'))) ?>">Logout</a>
+        <?php else: ?>
+            <a href="<?php echo wp_login_url(esc_url(home_url('/'))) ?>">Login</a>
+        <?php endif; ?>
+    </div>
+
+
 <div id="search">
     <div class="container">
         <form action="<?php echo esc_url(home_url('/')); ?>">
             <div class="row">
                 <div class="col-12 col-sm-8 col-md-10">
-                    <input type="text" name="s" id="searchBox" placeholder="Type your query here..." />
+                    <input type="text" name="s" id="searchBox" class="gar-input" placeholder="Type your query here..." />
                 </div>
                 <div class="col-12 col-sm-4 col-md-2">
-                    <button id="searchBtn" type="submit">
+                    <button id="searchBtn" class="gar-btn" type="submit">
                         <span class="fa fa-search"></span>&nbsp;Search
                     </button>
                 </div>
@@ -43,6 +59,7 @@
                             <li><a href="<?php echo esc_url(home_url('/category/tools')) ?>">Tools</a></li>
                             <li><a href="<?php echo esc_url(home_url('/category/levels')) ?>">Other</a></li>
                             <li><a href="#" data-toggle="search"><span class="fa fa-search"></span></a></li>
+                            <li class="gar-menu-submit"><a href="<?php echo esc_url(home_url('/submit')) ?>">Submit</a></li>
                         </ul>
                     </nav>
                 </div>

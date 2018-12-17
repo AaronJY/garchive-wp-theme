@@ -10,6 +10,7 @@
 
         initPostGrid(postGrid, '.gar-post-box');
         initSearch('a[data-toggle=search]', search, searchbox);
+        initTinyMCE('.rte');
     });
     
     function initSearch(toggleSelector, search, searchbox) {
@@ -32,6 +33,15 @@
             itemSelector: itemSelector,
             percentPosition: true,
             gutter: 20
+        });
+    }
+
+    function initTinyMCE(editorSelector) {
+        if (typeof tinymce === 'undefined')
+            return;
+
+        tinymce.init({
+            selector: editorSelector
         });
     }
 })(jQuery);

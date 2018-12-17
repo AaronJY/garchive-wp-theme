@@ -147,9 +147,12 @@ pre {
 }
 
 #searchBox {
-    width: 100%;
     height: 100%;
     box-sizing: border-box;
+}
+
+.gar-input {
+    width: 100%;
     border: none;
     border-bottom: 1px solid #111;
     background-color: #fff;
@@ -158,18 +161,58 @@ pre {
 #searchBtn {
     width: 100%;
     height: 100%;
-    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-weight: bold;
-    border: 0;
-    padding: 8px;
-    color: #fff;
-    background-color: #111;
 }
 
 #comment {
     max-width: 100%;
 }
+
+.gar-menu-submit a {
+    color: rgb(235, 146, 0);
+}
+
+.gar-menu-submit a:hover {
+    color: rgb(255, 186, 100);
+}
+
+.gar-btn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    border: 0;
+    padding: 8px 15px;
+    color: #fff;
+    background-color: #111;
+}
+
+.container-sm {
+    max-width: 800px;
+}
+
+.gar-userbox {
+    position: absolute;
+    right: 10%;
+    padding: 5px 15px;
+    background-color: #111;
+    top: 0;
+    font-size: 14px;
+}
+
+.gar-userbox-username {
+    color: #fff;
+    margin-right: 10px;
+}
+
+.gar-userbox a {
+    color: #fff;
+}
+
+.gar-load-more a {
+    font-weight: 400;
+    color: #fff;
+}
+
 
 @media only screen and (max-width: 767px) {
     #postGrid .gar-post-box {
