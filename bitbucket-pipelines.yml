@@ -7,4 +7,4 @@ pipelines:
           script:
             - apt-get update
             - apt-get -qq install git-ftp
-            - git ftp init --user $FTP_USERNAME --passwd $FTP_PASSWORD "ftp://91.197.228.162/home/uihnkvpp/wp_graal/wp-content/themes/graal-archive"
+            - git ftp push --user $FTP_USERNAME --passwd $FTP_PASSWORD "ftp://91.197.228.162/home/uihnkvpp/wp_graal/wp-content/themes/graal-archive"
