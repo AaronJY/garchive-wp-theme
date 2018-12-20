@@ -52,12 +52,13 @@ a:hover {
     color: #111;
 }
 
-.gar-header-nav {
+.gar-header-nav ul {
     margin: 20px 0;
 }
 
-.gar-header-nav li {
+.gar-header-nav ul li {
     margin: 0 10px;
+    display: inline-block;
 }
 
 #postGrid .gar-post-box {
@@ -192,7 +193,7 @@ pre {
 
 .gar-userbox {
     position: absolute;
-    right: 10%;
+    right: 8%;
     padding: 5px 15px;
     background-color: #111;
     top: 0;

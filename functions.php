@@ -50,6 +50,11 @@ add_action('template_redirect', function () {
     }
 });
 
+
+add_action('init', function () {
+    register_nav_menu('header-menu', __('Header Menu'));
+});
+
 // Register Custom Post Type
 
 add_action('init', function () {
