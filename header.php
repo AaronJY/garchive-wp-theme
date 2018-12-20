@@ -5,7 +5,7 @@
     <meta charset="<?php bloginfo('charset'); ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content="A collection of scripts and other content made by Graal Online players"/>
-    <title>G-Archive - Graal's player-made content archive</title>
+    <title><?php echo get_bloginfo('name'); ?> - <?php echo get_bloginfo('description'); ?></title>
     <?php wp_head() ?>
 </head>
     
