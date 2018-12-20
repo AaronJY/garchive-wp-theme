@@ -12,15 +12,15 @@
 <body <?php body_class(); ?>>
 
 <?php
-    $curr_user = wp_get_current_user();
+$curr_user = wp_get_current_user();
 ?>
 
 
     <div class="gar-userbox">
-        <?php if ($curr_user->ID !== 0): ?>
+        <?php if ($curr_user->ID !== 0) : ?>
             <span class="gar-userbox-username"><?php echo $curr_user->user_login ?></span>
             <a href="<?php echo wp_logout_url(esc_url(home_url('/'))) ?>">Logout</a>
-        <?php else: ?>
+        <?php else : ?>
             <a href="<?php echo wp_login_url(esc_url(home_url('/'))) ?>">Login</a>
         <?php endif; ?>
     </div>
@@ -53,14 +53,23 @@
             <div class="col-sm-12">
                 <div class="text-center">
                     <nav>
-                        <ul class="gar-list-flat gar-header-nav">
+                        <!-- <ul class="gar-list-flat gar-header-nav">
                             <li><a href="<?php echo esc_url(home_url('/category/scripts')) ?>">Scripts</a></li>
                             <li><a href="<?php echo esc_url(home_url('/category/server-backups')) ?>">Backups</a></li>
                             <li><a href="<?php echo esc_url(home_url('/category/tools')) ?>">Tools</a></li>
                             <li><a href="<?php echo esc_url(home_url('/category/levels')) ?>">Other</a></li>
                             <li><a href="#" data-toggle="search"><span class="fa fa-search"></span></a></li>
                             <li class="gar-menu-submit"><a href="<?php echo esc_url(home_url('/submit')) ?>">Submit</a></li>
-                        </ul>
+                        </ul> -->
+
+                        <div class="gar-header-nav">
+                            <?php 
+                                wp_nav_menu(array(
+                                    'theme_location' => 'header-menu'
+                                ));
+                            ?>
+                        </div>
+                        
                     </nav>
                 </div>
             </div>
