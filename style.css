@@ -54,6 +54,7 @@ a:hover {
 
 .gar-header-nav ul {
     margin: 20px 0;
+    padding-inline-start: 0;
 }
 
 .gar-header-nav ul li {
