@@ -7,7 +7,7 @@
                 
                 <p style="font-size: 12px">
                     Site by Aaron Yarborough <br/>
-                    <a href="mailto:me@aaronjy.me">Contact me</a>
+                    <a href="mailto:graalarchive@aaronjy.me">Contact me</a>
                 </p>
             </div>
         </div>
