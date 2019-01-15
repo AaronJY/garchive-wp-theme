@@ -9,7 +9,7 @@
         searchbox = $('#searchBox')
 
         initPostGrid(postGrid, '.gar-post-box');
-        initSearch('a[data-toggle=search]', search, searchbox);
+        initSearch('a[href="#search"]', search, searchbox);
         initTinyMCE('.rte');
     });
     
